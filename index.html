@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Uno (R1)</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div>
+    <div>
+        <h1>
+            Arduino Uno (R1)
+        </h1>
+    </div>
+
+    <div>
+        <h3>
+            datos
+        </h3>
+        <p>
+            La versión R1 de Arduino Uno fue la primera en utilizar el microcontrolador ATmega328P,
+            que se convirtió en el estándar para las placas Uno posteriores.
+            Esta versión también introdujo el conector USB B para la conexión a la computadora.
+        </p>
+        <img src="/img/arduino r1.png" alt="foto de arduino uno R1">
+    </div>
+
+    <div>
+        <h2>Diferencias entre el Arduino Uno, R2 y R3 original</h2>
+
+        <h3>Posición del chip USB</h3>
+        <p>En la placa Arduino Uno revisión 2, el ATMEGA8U2 está colocado a 45 grados. Esto se cambia
+           de nuevo a la posición cuadrada en el tablero de revisión 3.
+        </p>
+        <img src="img/Posición del chip USB.png" alt="Diferencias entre placas">
+
+        <h3>Almohadillas de soldadura</h3>
+        <p>Tanto la revisión 2 como la 3 placas añaden cuatro almohadillas de soldadura (JP2)
+            que se conectan a los pines PB4 a PB7 del USB ATMEGA.
+        </p>
+        <img src="/img/Almohadillas de soldadura.png" alt="Diferencias entre las soldadura">
+
+        <h3>Número de pieza</h3>
+        <p>Tanto el Arduino Uno como el Arduino Uno revision 2 tienen un microcontrolador USB ATMEGA8U2 a bordo,
+           que se ha actualizado a un ATMEGA16U2 en la placa de revisión 3.
+        </p>
+
+        <h3>Restablecer circuito</h3>
+        <p>La revisión 3 agrega un diodo a través de la resistencia pull-up del pin de reinicio USB ATMEGA.</p>
+        <img src="img/Restablecer circuito.png" alt="circuito de restablecimiento">
+
+        <h3>Encabezado ICSP</h3>
+        <p>Las placas Revision 2 y 3 se suministran con pines de cabecera en el cabezal USB ATMEGA ICSP en lugar
+           de solo almohadillas de soldadura en el Arduino Uno.
+        </p>
+        <img src="img/Encabezado ICSP.png" alt="encabezado ICSP">
+
+        <h3>Línea DTR (HWB)</h3>
+        <p>Las placas de revisión 2 y 3 añaden una resistencia pull-down de 1k a la línea DTR (HWB) procedente del
+           microcontrolador USB ATMEGA, del pin PD7.
+        </p>
+        <img src="img/Línea DTR (HWB).png" alt="linea de DTR">
+
+        <h3>LED "L" integrado</h3>
+        <p>El Arduino Uno y el Arduino Uno revision 2 tienen un LED y una resistencia conectados en serie en el pin 13 de Arduino.
+           La placa de revisión 3 amortigua este LED/resistencia a través de un amplificador operacional de ganancia unitaria.
+           Este es el amplificador operacional de repuesto que no se usó en las placas anteriores.
+        </p>
+        <img src="img/LED L integrado.png" alt="LED">
+
+        <h3>Conectores</h3>
+        <p>La placa de revisión 3 cambia el conector de 8 pines que contiene los pines de Arduino 8 a 13, GND y AREF por un conector de
+            10 pines. Los 2 pines adicionales están conectados a AD4/SDA y AD5/SCL. Estos son los dos pines de entrada analógica que se
+            pueden utilizar para I2C. Estos pines todavía están conectados en su posición habitual en la placa de revisión 3, pero también
+            están conectados a los dos pines adicionales en el cabezal de 10 pines.
+
+            Las placas de revisión 3 también cambian el conector de 6 pines que tiene el pin de restablecimiento conectado a un conector
+            de 8 pines. Uno de los nuevos pines de este cabezal es el pin IOREF que permite que los shields conectados a la placa se adapten
+            al voltaje de la placa. El segundo pin no está conectado y está reservado para uso futuro.
+        </p>
+        <img src="img/Conectores.png" alt="Conectores">
+
+        <h3>Pin de reinicio ATMEGA</h3>
+        <p>La placa de revisión 3 agrega un diodo a través de la resistencia de pin de reinicio del ATMEGA328P microcontrolador.</p>
+        <img src="img/Pin de reinicio ATMEGA.png" alt="pin de reinicio">
+
+        <h3>Posición del botón de reinicio</h3>
+        <p>La placa de revisión 3 mueve el interruptor de botón de restablecimiento de ATMEGA328 desde detrás del encabezado ICSP y
+            lo coloca junto al conector USB (vea la primera imagen en la parte superior de la página).
+        </p>
+
+        <h3>Esquemas de Arduino Uno</h3>
+        <p>los esquemas de la placa Arduino Uno para que te hagas una idea</p>
+        <a href="/data/arduino-uno.pdf">Descargar PDF</a>
+    </div>
+
+    <div>
+        <h2>datos tenicos</h2>
+        <h3>Arduino Uno (R1)</h3>
+        <li>Lanzamiento: 2010</li>
+        <li>Microcontrolador: ATmega328P</li>
+        <li>Frecuencia: 16 MHz</li>  
+        <li>Memoria:</li>
+            <ul>
+                <li> Flash: 32 KB</li>
+                <li> SRAM: 2 KB</li>
+                <li> EEPROM: 1 KB</li>
+            </ul>     
+        <li>Puertos</li>   
+            <ul>
+                <li>14 entradas/salidas digitales</li>
+                <li>6 salidas analógicas</li>
+                <li>1 puerto serie (UART)</li>
+                <li>1 puerto SPI</li>
+                <li>1 puerto I2C</li>
+            </ul>
+        <li>Otros</li>
+            <ul>
+                <li>Tensión de funcionamiento: 5V</li>
+                <li>Corriente de funcionamiento: 50 mA</li>
+                <li>Dimensiones: 68.6 x 53.4 mm</li>
+            </ul>    
+    </div>
+</div>
+</body>
+</html>
